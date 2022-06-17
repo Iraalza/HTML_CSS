@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexible layout</title>
+    </head>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        header{
+            padding: 10px;
+            margin: 50px;
+            margin-bottom: 10px;
+            background: aqua;
+            flex-basis: 100%;
+        }
+        main{
+            padding: 10px;
+            margin: 50px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: aqua;
+            flex-basis: 61.5%;
+        }
+        aside{
+            padding: 10px;
+            margin: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            background: aqua;
+            flex-basis: 30%;
+        }
+        footer{
+            padding: 10px;
+            margin: 50px;
+            margin-top: 10px;
+            background: aqua;
+            flex-basis: 100%;
+        }
+    </style>
+    <body>
+        <header>
+            <p>HEDER</p>
+        </header>
+        <main>
+            <p>MAIN</p>
+        </main>
+        <aside>
+            <p>ASIDE</p>
+        </aside>
+        <footer>
+            <p>FOOTER</p>
+        </footer>
+    </body>
+</html>

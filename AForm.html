@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Адаптивная форма</title>
+    </head>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.container{
+            border: 0.1rem black solid;
+            border-radius: 10%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        div{
+            padding: 10px;
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        @media screen and (min-width:1201px) {
+	        .container {
+		        width: 500px;
+	        }
+        }   
+        @media screen and (min-width:901px) and (max-width:1200px) {
+	        .container {
+		        width: 450px;
+	        }
+        }
+        @media screen and (min-width: 601px) and (max-width: 900px) {
+	        .container {
+		        width: 400px;
+		        height: 240px;
+		        padding-bottom: 15px;
+	        }
+        }
+        @media screen and (max-width:600px) {
+	        .container {
+		        width: 350px;
+		        height: 240px;
+		        padding-bottom: 15px;
+	        }
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="head">
+                <p>Login</p>
+            </div>
+            <div>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            </div>
+            <div>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+            <div>
+            <button type="button">Login</button>
+            </div>
+        </div>
+    </body>
+</html>

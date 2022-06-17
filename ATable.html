@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Адаптивная таблица</title>
+    </head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 100%;
+            border: 1px solid rgb(222, 222, 222);
+            border-collapse: collapse;
+        }
+        td{
+            border-bottom: 1px solid rgb(222, 222, 222);
+            border-collapse: collapse;
+        }
+        th{
+            border-bottom: 1px solid rgb(222, 222, 222);
+            border-collapse: collapse;
+        }
+        tr{
+            border-bottom: 1px solid rgb(222, 222, 222);
+            border-collapse: collapse;
+        }
+        tr:nth-child(2n){
+            background: rgb(240, 240, 240);
+        }
+        tr:nth-child(1){
+            background: rgb(222, 222, 222);
+        }
+        tr:hover td{
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+        @media screen and (min-width:1201px) {
+	        table {
+		        width: 800px;
+	        }
+	        th {
+		        background-color: rgb(50, 50, 50);
+		        color: white;
+		        padding-left: 10px;
+	        }
+	        td {
+		        width: 33%;
+	        }
+        }
+
+        @media screen and (min-width:901px) and (max-width:1200px) {
+	        table {
+		        width: 600px;
+	        }
+	        th {
+		        background-color: rgb(50, 50, 50);
+		        color: white;
+		        padding-left: 10px;
+	        }
+	        td {
+		        width: 33%;
+	        }
+        }
+
+        @media screen and (min-width:601px) and (max-width:900px) {
+	        table {
+		        width: 300px;
+	        }
+	        thead {
+		        display: none;
+	        }
+	        td {
+		        display: block;
+		        text-align: left;
+		        padding-left: 20px;
+		        font-weight: normal;
+	        }
+	        td::before {
+		        content: attr(data-title);
+		        float: left;
+		        font-weight: bold;
+		        margin-right: 20px;
+	        }
+        }
+
+        @media screen and (max-width:600px) {
+	        table {
+		        width: 200px;
+	        }
+	        thead {
+		        display: none;
+	        }
+	        td {
+		        display: block;
+		        text-align: left;
+		        font-weight: normal;
+	        }
+	        td::before {
+		        content: attr(data-title);
+		        float: left;
+		        font-weight: bold;
+		        margin-right: 10px;
+	        }
+        }
+    </style>
+    <body>
+        <table border="1">
+                <tr>
+                    <td><strong>First Name</strong></td>
+                    <td><strong>Last Name</strong></td>
+                    <td><strong>Job Title</strong></td>
+                </tr>
+                <tr>
+                    <td>James</td>
+                    <td>Matman</td>
+                    <td>Chief Sandwich Eater</td>
+                </tr>
+                <tr>
+                    <td>Jon</td>
+                    <td>Doe</td>
+                    <td>Chief Executive Eater</td>
+                </tr>
+        </table>
+    </body>
+</html>
